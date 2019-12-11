@@ -1,0 +1,18 @@
+<div class="loginBox">
+    <form [formGroup]= "loginForm">
+    <img src="./assets/img/logo.png" width="65" height="50" style="padding-top:15px;">
+    <p class="signInText">Please sign in</p>
+    <div style="padding: 10px;">
+        <input type="text" class="inputBox" #name placeholder="User name"  formControlName="username">
+        <!-- <span *ngIf="isValid('username')" >Username cannot be blank</span> -->
+    </div>
+    <div style="padding: 10px;">
+        <input type="password" #password class="inputBox" placeholder="Password"  formControlName="password">
+        <!-- <span *ngIf="isValid('password')">Password cannot be blank</span> -->
+    </div>
+    <div><button class="signinButton" (click)="logintest()">Login</button></div>
+</form>
+<div><button class="signinButtonFB" (click)=" fbLogin()">LoginFacebook</button></div>
+<div><button class="signinButtonFB" (click)="ggLogin()">LoginGoogle</button></div>
+</div>
+

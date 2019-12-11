@@ -1,0 +1,100 @@
+.loginBox {
+    background-color: whitesmoke;
+    width: 500px;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    text-align: center;
+    padding-bottom: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.inputBox {
+    width: 200px;
+    height: 25px;
+    font-size: 12px;
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+.signinButton {
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    background-color: blue ;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signinButtonFB {
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    background-color: blue ;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signinButton:focus{
+    outline: none;
+ }
+ .signinButton:hover{
+     background-color: yellowgreen;
+ }
+.signInText {
+    font-size: 14px;
+    color: gray;
+}
+.formcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbody{
+    display: flex;
+    width: 290px;
+    min-height: 200px;
+    background-color: white;
+    box-shadow:0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+div > span {
+    font-size: 0.75rem;
+    color: firebrick;
+}
+
+.header{
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;      
+  }
+// Login Facebook
+.example-container {
+    position: relative;
+    padding: 5px;
+    background-color: aqua;
+  }
+  
+  .example-loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-card {
+    margin: 5px;
+    padding-bottom: 40px;
+  }

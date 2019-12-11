@@ -1,0 +1,49 @@
+<div class="row header">
+    <div class="col-sm">
+      <h4>Cart</h4>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm list-action-button">
+      <a href="#" [routerLink]="['/userlogin']" class="btn btn-link float-right fa fa-file fa-lg action-label">Thanh Toán</a>
+    </div>
+  </div>
+  
+  <div class="row content">
+    <div class="col-sm-12">
+      <table class="table table-striped"  *ngIf="(cart && cart.length > 0); else emptyCartTemplate">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Hình ảnh</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Giá tiền</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of cart; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td><img [src]="product.ImageUrl" width="100px" height="100px"/></td>
+            <td>{{product.quantity}}</td>
+            <td>{{ product.money }} $</td>
+            <td><button class='delete-label fa fa-trash-o' (click)='removeCartItem($event,product)' ></button></td>
+          </tr>
+        </tbody>
+        
+        <table class="table table-striped">
+            <td>Tổng tiền</td>
+            <td>{{ pays}} $</td>
+        </table>
+      </table>
+      <ng-template #emptyCartTemplate>
+        <div class="text-center display-3"  style="font-size: 30px;">Không có sản phẩm nào trong giỏ hàng</div>
+        <div class="text-center">
+          <img style="max-width: 300px; max-height: 300px;"
+            src="./assets/img/empty_cart.png" alt="">
+        </div>
+      </ng-template>
+    </div>
+  </div>

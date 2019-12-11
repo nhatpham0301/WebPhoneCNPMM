@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+@import url(../src/app/font-css/css/core-style.css);
+
+//@import url(../src/app/js/active.js);
+//@import url(../src/app/js/bootstrap.min.js);
+//@import url(../src/app/js/classy-nav.min.js);
+//@import url(../src/app/js/map-active.js);
+//@import url(../src/app/js/plugins.js);
+//@import url(../src/app/js/popper.min.js);
+//@import url(../node_modules/bootstrap/dist/js/jquery-2.2.4.min.js);
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+button{
+    border: none;
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    background-color: blue;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

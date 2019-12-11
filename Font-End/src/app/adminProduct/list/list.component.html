@@ -1,0 +1,45 @@
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="row header">
+    <div class="col-sm">
+      <h4>Products</h4>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm list-action-button">
+      <a href="#" routerLink="donhang" class="btn btn-link float-right links-primary fa fa-filter fa-lg action-label">Đơn Hàng</a>
+      <a href="#" routerLink="add" class="btn btn-link float-right fa fa-file fa-lg action-label">Add New</a>
+    </div>
+  </div>
+  
+  <div class="row content">
+    <div class="col-sm-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Giá tiền</th>
+            <th scope="col">Hình ảnh</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ product.TenSP }}</td>
+            <td>{{ product.MoTa }}</td>
+            <td>{{ product.Gia }}</td>
+            <td><img [src]="product.ImageUrl" width="100px" height="100px"/></td>
+            <td><button class='fa fa-edit' (click)='updateProduct1(product._id)' ></button></td>
+            <td><button class='delete-label fa fa-trash-o' (click)='deleteProduct(product)' ></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

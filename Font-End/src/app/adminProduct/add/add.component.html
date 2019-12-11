@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-sm">
+    <h4>Add Product</h4>
+  </div>
+</div>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div class="jumbotron col-sm-8" style="margin:auto">
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Tên sản phẩm</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="TenSP"
+          [ngClass]="{ 'is-invalid': submitted && f.TenSP.errors }">
+        <div *ngIf="submitted && f.TenSP.errors" class="invalid-error">
+          <div *ngIf="f.TenSP.errors.required">Name is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Mô tả</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="MoTa"
+          [ngClass]="{ 'is-invalid': submitted && f.MoTa.errors }">
+        <div *ngIf="submitted && f.MoTa.errors" class="invalid-error">
+          <div *ngIf="f.MoTa.errors.required">Code is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Hình ảnh</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="ImageUrl"
+          [ngClass]="{ 'is-invalid': submitted && f.ImageUrl.errors }">
+        <div *ngIf="submitted && f.ImageUrl.errors" class="invalid-error">
+          <div *ngIf="f.ImageUrl.errors.required">Code is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">Gía tiền</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="Gia"
+          [ngClass]="{ 'is-invalid': submitted && f.Gia.errors }">
+        <div *ngIf="submitted && f.Gia.errors" class="invalid-error">
+          <div *ngIf="f.Gia.errors.required">Code is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">&nbsp;</div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 col-form-label">&nbsp;</label>
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-success fa fa-floppy-o" >&nbsp;Save</button>&nbsp;
+        <!-- <button type=" submit" class="btn btn-success fa fa-floppy-o" (click)="saveAndContinue($event)">&nbsp;Save &
+          Continue</button>&nbsp; -->
+        <button class="btn btn-light fa fa-ban" routerLink='/adminProduct'>&nbsp;Cancel</button>
+      </div>
+    </div>
+  </div>
+</form>
