@@ -5,7 +5,7 @@
     "main": "server.js",
     "express": "^4.17.1",
     "dependencies": {
-        "bcrypt": "^3.0.7",
+        "bcrypt": "^5.0.0",
         "bcrypt-nodejs": "0.0.3",
         "cors": "^2.8.5",
         "emailjs": "^2.2.0",
